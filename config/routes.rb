@@ -1,4 +1,11 @@
 DynamicForm::Application.routes.draw do
+  get "activities/index"
+  get "activities/show"
+  get "activities/new"
+  get "activities/create"
+  get "activities/edit"
+  get "activities/update"
+  get "activities/destroy"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
