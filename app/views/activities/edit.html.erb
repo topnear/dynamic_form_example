@@ -1,2 +1,6 @@
-<h1>Activities#edit</h1>
-<p>Find me in app/views/activities/edit.html.erb</p>
+<h1>edit  activity</h1>
+<%= form_for @activity  do |f|%>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	<%= f.submit "edit" %>
+<% end %>

@@ -1,2 +1,5 @@
-<h1>Activities#show</h1>
-<p>Find me in app/views/activities/show.html.erb</p>
+<h1>Activity <%= @activity.id %></h1>
+<div>
+	<p>title: <%= @activity.title %></p>
+</div>
+<div><%= link_to("go back index page", activities_path) %></div>

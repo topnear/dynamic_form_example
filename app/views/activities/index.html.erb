@@ -1,2 +1,13 @@
-<h1>Activities#index</h1>
-<p>Find me in app/views/activities/index.html.erb</p>
+<h1>Activities</h1>
+<div>
+	<%= link_to("new activity", new_activity_path) %>
+</div>
+<% @activities.each do |activity| %>
+	<div>
+		<p><%= activity.title %>
+			<span><%= link_to("show", activity_path(activity)) %></span> 
+			<span><%= link_to("edit", edit_activity_path(activity)) %></span>
+			<span><%= link_to("delete", activity_path(activity), method: :delete) %></span>
+		</p>
+	</div>
+<% end %>

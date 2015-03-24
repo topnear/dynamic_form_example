@@ -1,2 +1,7 @@
-<h1>Activities#new</h1>
-<p>Find me in app/views/activities/new.html.erb</p>
+<h1>Create new activity</h1>
+<%= form_for @activity  do |f|%>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	<%= f.submit "create" %>
+<% end %>
+<div><%= link_to("go back index page", activities_path) %></div>
