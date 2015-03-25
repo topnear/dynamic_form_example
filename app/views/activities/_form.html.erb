@@ -1,0 +1,11 @@
+<%= form_for @activity  do |f|%>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+	<%= f.fields_for :descriptions do |desc_f| %>
+		<%= render("descriptions/description_field", f: desc_f ) %>
+	<% end %>
+	<%= link_to_add_desc_field("add description", f, :descriptions) %>
+	<div>
+		<%= f.submit goal %>
+	</div>
+<% end %>

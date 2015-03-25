@@ -2,4 +2,15 @@
 <div>
 	<p>title: <%= @activity.title %></p>
 </div>
+<% if @activity.descriptions.any? %>	
+	<% @activity.descriptions.each do |description| %>
+		<div>
+			description: <%= description.name %>
+		</div>
+	<% end %>
+	<% else %>
+		<div>
+			no description
+		</div>
+<% end %>
 <div><%= link_to("go back index page", activities_path) %></div>

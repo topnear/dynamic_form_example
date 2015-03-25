@@ -9,6 +9,7 @@ class ActivitiesController < ApplicationController
 
   def new
     @activity = Activity.new
+    2.times {@activity.descriptions.build}
   end
 
   def create
@@ -41,7 +42,8 @@ class ActivitiesController < ApplicationController
   private
 
   def activity_params
-    params.require(:activity).permit(:title)
+    params.require(:activity).permit(:title, 
+      :descriptions_attributes => [:id, :name])
   end
 
 end
