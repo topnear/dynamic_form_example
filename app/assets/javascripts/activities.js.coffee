@@ -1,4 +1,4 @@
-jQuery ->
+$(document).on "page:change", ->
 	$('form').on 'click', '.add_desc_field', (event) ->
 		time = new Date().getTime()
 		regexp = new RegExp($(this).data('id'), 'g')
